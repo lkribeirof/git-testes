@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #14a32e;
+    margin: 0 auto;
+    position: relative;
+    /* overflow: hidden; */
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation infinite linear 2.5s;
+}
+
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    
+}
+
+.jump{
+
+    animation: jump 500ms ease-out;
+
+}
+
+.cloud { 
+    position: absolute;
+    width: 250px;
+    animation: cloud-animation infinite linear 10s;
+}
+
+.died {
+    animation: died ease-in-out 2s;
+    
+}
+
+.iniciar-game{
+    position: absolute;
+    background-image:url("./img/parede.png");
+    width: 500px;
+    height: 300px;
+    left: 35vw;
+    bottom: -400px;
+
+    
+    
+}
+.reset{
+    animation: game-over linear 2s infinite ;
+}
+
+.titulo-gg {
+    position: relative;
+    left: 30%;
+    top: 25%;
+}
+
+.bt-restart{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: 30%;
+    top: 50%;
+    
+   
+}
+
+
+
+@keyframes game-over{
+    0% {
+        bottom: -400px;
+    }
+
+    100% {
+        bottom : 100px;
+    }
+}
+ 
+@keyframes died {
+    0%{ 
+
+        bottom: 10px;
+        left: 30%;
+
+    }
+    
+    50%{
+
+        bottom: 300px;
+        left: 50%;
+
+    }
+ 
+ 
+  
+    100%{
+
+        bottom: -100px;
+        left: 50%;
+
+    }
+}
+
+@keyframes cloud-animation{
+    from {
+        right: -250px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+@keyframes pipe-animation{
+    from {
+
+        right: -80px;
+
+    }
+    
+    to {
+
+        right: 100%;
+
+    }
+}
+
+@keyframes jump {
+
+    0%{
+
+        bottom: 0;
+
+    } 
+
+    40%{
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+
+
+
+}
